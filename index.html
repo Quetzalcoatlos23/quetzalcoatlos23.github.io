@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b14">
+  <meta name="description" content="Portfolio pribadi Georel Bonai">
+  <title>Portfolio | Georel Bonai</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header wrap" id="top">
+    <a class="logo" href="#top">[ <span id="initials">GB</span> ]</a>
+    <button class="menu" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#about">01 / ABOUT</a>
+      <a href="#credentials">02 / CREDENTIALS</a>
+      <a href="#focus">03 / FOCUS</a>
+      <a href="#contact">04 / CONTACT</a>
+    </nav>
+    <a class="header-link" href="#contact">LET'S CONNECT ↗</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="about">
+      <div>
+        <p class="eyebrow"><span class="dot"></span> OPEN TO OPPORTUNITIES <span class="muted">/ PERSONAL PORTFOLIO</span></p>
+        <p class="serial">PORTFOLIO / <span id="year-range">2026</span></p>
+        <h1 id="name">GEOREL<br>BONAI</h1>
+        <p class="accent" id="role">SYSTEMS / SECURITY / AI</p>
+        <p class="lead" id="tagline"></p>
+        <p class="body-copy" id="intro"></p>
+        <a class="button" href="#credentials">EXPLORE MY WORK <span>↗</span></a>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="portrait"><span id="portrait-initials">GB</span></div>
+        <div class="visual-label">SYS.ID // <span id="visual-code">GB-001</span><br>SIGNAL: <strong>STABLE</strong></div>
+      </div>
+    </section>
+
+    <section class="split-section" id="credentials">
+      <div class="section-heading"><p class="eyebrow">01 / CREDENTIALS</p><h2>PROOF OF<br><em>PROGRESS.</em></h2><p>A living archive of the things I've learned, built, and earned along the way.</p></div>
+      <div class="card-grid" id="certificate-list"></div>
+    </section>
+
+    <section class="focus-section" id="focus">
+      <p class="eyebrow">02 / CURRENT FOCUS</p><div class="focus-heading"><h2>THE NEXT<br><em>FRONTIER.</em></h2><p>These are the disciplines currently occupying my terminal, my notebooks, and most of my questions.</p></div>
+      <div id="focus-list"></div>
+    </section>
+
+    <section class="split-section contact" id="contact">
+      <div class="section-heading"><p class="eyebrow">03 / OPEN CHANNELS</p><h2>LET'S BUILD<br><em>WHAT'S NEXT.</em></h2><p>Have a project or an opportunity? My inbox is open.</p></div>
+      <div class="contact-links" id="contact-links"></div>
+    </section>
+  </main>
+  <footer class="footer wrap"><div><strong>[ <span id="footer-name">GEOREL BONAI</span> ]</strong><small id="location"></small></div><div class="social" id="social-links"></div><small>© <span id="year"></span> <span id="copyright-name"></span>.</small></footer>
+</body>
+</html>
