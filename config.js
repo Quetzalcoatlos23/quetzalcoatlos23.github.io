@@ -10,15 +10,15 @@ const PORTFOLIO = {
   initials: "GB",
   heroFirst: "GEOREL", // Dua baris besar pada bagian awal halaman
   heroLast: "BONAI",
-  portrait: "assets/cyber-portrait.svg", // Ganti dengan "assets/foto-saya.jpg" setelah mengunggah foto
+  portrait: "assets/Studio Photo.png", // Ganti dengan "assets/foto-saya.jpg" setelah mengunggah foto
   role: "COMPUTER ENGINEERING / CYBERSECURITY / AI & MACHINE LEARNING / SYSTEM ADMINISTRATION",
   tagline: "Building reliable systems and exploring practical security.",
   intro: "Computer Engineering Fresh Graduate from Universitas Amikom Yogyakarta. I'm interested in cybersecurity, networks, system administration, and machine learning.",
-  location: "Indonesia",
+  location: "Papua Tengah, Indonesia",
   email: "georelbonai@gmail.com",
   github: "https://github.com/Quetzalcoatlos23",
   linkedin: "https://www.linkedin.com/in/georel-bonai-4b25943bb",
-  cv: "", // contoh: "assets/documents/CV-Georel-Bonai.pdf"
+  cv: "assets/documents/Curiculum Vitae ATS (English).pdf", // contoh: "assets/documents/CV-Georel-Bonai.pdf"
   coverLetter: "", // contoh: "assets/documents/Cover-Letter.pdf"
 
   // Setiap kategori menjadi baris tersendiri di halaman.
@@ -39,25 +39,26 @@ const PORTFOLIO = {
       ]
     },
     {
-      heading: "Kampus & Bahasa",
-      note: "TOEFL dan sertifikat akademik",
+      heading: "Language & Academic Certificates",
+      note: "TOEFL and academic certificates",
       items: [
-        { title: "TOEFL", description: "Isi penerbit dan tanggal setelah sertifikat tersedia", year: "", certificateNumber: "", keywords: [], file: "", preview: "" }
+        { title: "TOEFL PRED: 490", description: "Amikom English Proficiency Test - Issued on Feb 6, 2026", year: "2026", certificateNumber: "#AEPT022609153", keywords: ["TOEFL PRED 490", "Upper Intermediate", "English Proficiency"], file: "assets/certificates/Sertifikat TOEFL.pdf", preview: "" }
       ]
     },
     {
-      heading: "Seminar & Pelatihan",
-      note: "Kegiatan yang pernah diikuti",
+      heading: "Seminars & Training",
+      note: "Activities participated in",
       items: [
-        { title: "Sertifikat Seminar", description: "Ganti dengan judul seminar dan penyelenggara", year: "", certificateNumber: "", keywords: [], file: "", preview: "" }
+        { title: "Kuliah Umum Daring Mahasiswa Baru", description: "As a Participant in Online Public Lecture for New Students: AMIKOM Creative Economy Park - Building Positive Energy in Online Classes - Issued May 28, 2022", year: "2022", certificateNumber: "No: 0649.S/A.DKUI/AMIKOM/V/2022", keywords: ["ONLINE LECTURE", "NEW STUDENTS", "CREATIVE ECONOMY"], file: "assets/certificates/E-SertifikatKU Georel Jeferson Fransiskus Bonai - Kuliah Umum.pdf", preview: "" },
+        { title: "Digital Marketing Seminars", description: "As a Participant in Digital Marketing Seminar: \"Creating Marketing Content Is Easy\" - Issued Nov 30, 2022", year: "2022", certificateNumber: "No: 213/KMHS/AMIKOM/XI/2022", keywords: ["DIGITAL MARKETING", "CONTENT MARKETING"], file: "assets/certificates/E Sertifikat Georel Jeferson Fransiskus Bonai - Seminar Bikin Konten itu Mudah.pdf", preview: "" }
         // Contoh: ,{ title: "Seminar Jaringan", description: "Penyelenggara - 2026", year: "2026", certificateNumber: "ABC-123", keywords: ["NETWORKING"], file: "assets/certificates/seminar.pdf", preview: "assets/certificates/seminar.jpg" }
       ]
     }
   ],
 
   focus: [
-    { title: "CYBERSECURITY", tags: ["NETWORKS", "DEFENSE"], description: "Mempelajari keamanan jaringan, analisis ancaman, dan praktik perlindungan sistem." },
-    { title: "SYSTEM ADMINISTRATION", tags: ["LINUX", "AUTOMATION"], description: "Membangun dan merawat infrastruktur yang andal melalui otomasi dan pemantauan." },
-    { title: "AI + MACHINE LEARNING", tags: ["PYTHON", "SCIKIT-LEARN"], description: "Mengembangkan riset deteksi URL phishing menggunakan Multinomial Naïve Bayes." }
+    { title: "CYBERSECURITY", tags: ["NETWORKS", "DEFENSE"], description: "Studying network security, threat analysis, and system protection practices." },
+    { title: "SYSTEM ADMINISTRATION", tags: ["LINUX", "AUTOMATION"], description: "Building and maintaining reliable infrastructure through automation and monitoring." },
+    { title: "AI + MACHINE LEARNING", tags: ["PYTHON", "SCIKIT-LEARN"], description: "Developing research on phishing URL detection using Multinomial Naïve Bayes." }
   ]
 };
