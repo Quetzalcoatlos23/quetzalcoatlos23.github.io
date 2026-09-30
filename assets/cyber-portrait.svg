@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 880" role="img" aria-label="Cyber portrait placeholder">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b3550"/><stop offset="1" stop-color="#020a17"/></linearGradient><linearGradient id="body" x2="1" y2="1"><stop stop-color="#0c5f70"/><stop offset="1" stop-color="#091624"/></linearGradient><pattern id="grid" width="55" height="55" patternUnits="userSpaceOnUse"><path d="M55 0H0V55" fill="none" stroke="#00f0ff" stroke-opacity=".12"/></pattern></defs>
+<rect width="720" height="880" fill="url(#bg)"/><rect width="720" height="880" fill="url(#grid)"/>
+<circle cx="360" cy="390" r="245" fill="none" stroke="#00f0ff" stroke-opacity=".19" stroke-width="2"/><circle cx="360" cy="390" r="190" fill="none" stroke="#00ff66" stroke-opacity=".12" stroke-dasharray="8 16"/>
+<path d="M75 880Q105 665 235 636L300 598v-80h120v80l65 38Q615 665 645 880" fill="url(#body)" stroke="#00f0ff" stroke-opacity=".4" stroke-width="3"/>
+<path d="M255 286q0-138 105-138t105 138v163q-5 109-105 122-100-13-105-122Z" fill="#123849" stroke="#00f0ff" stroke-opacity=".6" stroke-width="3"/>
+<path d="M255 312q1-175 107-175 101 0 108 166l-26-32-38-55-78 28-52 21Z" fill="#05202e" stroke="#00f0ff" stroke-opacity=".45" stroke-width="3"/>
+<path d="M290 369h45m50 0h45M317 460q43 24 86 0" stroke="#00f0ff" stroke-opacity=".5" stroke-width="4" fill="none"/><path d="M0 715h720M0 770h720M0 825h720" stroke="#00f0ff" stroke-opacity=".08"/>
+<text x="40" y="45" fill="#00f0ff" font-family="monospace" font-size="16" opacity=".7">PORTRAIT // ADD YOUR PHOTO IN CONFIG.JS</text>
+</svg>
