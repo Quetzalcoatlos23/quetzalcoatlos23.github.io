@@ -11,7 +11,7 @@ const PORTFOLIO = {
   "role": "COMPUTER ENGINEERING / CYBERSECURITY / AI & MACHINE LEARNING / SYSTEM ADMINISTRATION",
   "tagline": "Building reliable systems and exploring practical security.",
   "intro": "Computer Engineering Fresh Graduate from Universitas Amikom Yogyakarta. I'm interested in cybersecurity, networks, system administration, and machine learning.",
-  "location": "Papua Tengah,Indonesia",
+  "location": "Papua Tengah, Indonesia",
   "email": "georelbonai@gmail.com",
   "github": "https://github.com/Quetzalcoatlos23",
   "linkedin": "https://www.linkedin.com/in/georel-bonai-4b25943bb",
@@ -78,7 +78,7 @@ const PORTFOLIO = {
     },
     {
       "heading": "Language & Academic Certificates",
-      "note": "TOEFL and academic certificates",
+      "note": "TOEFL and competition record",
       "items": [
         {
           "title": "TOEFL PRED: 490",
@@ -92,6 +92,31 @@ const PORTFOLIO = {
           ],
           "file": "assets/certificates/toefl.pdf",
           "preview": "assets/certificates/toefl.jpg"
+        },
+        {
+          "title": "Cyber Security Competition (CTF)",
+          "description": "AMICTA AMIKOM 2025 · Team Serabutan",
+          "year": "2025",
+          "certificateNumber": "",
+          "activityLabel": "TEAM SERABUTAN AMICTA 2025 CTF Competitor Offensive & Defensive Cybersecurity Track [ CAMPUS ACTIVITY RECORD - NO CERTIFICATE ISSUED ]",
+          "keywords": [
+            "CTF SECURITY",
+            "WEB EXPLOIT",
+            "CRYPTO",
+            "FORENSICS"
+          ],
+          "activityImages": [
+            "assets/competitions/ctf-1.png",
+            "assets/competitions/ctf-2.jpg",
+            "assets/competitions/ctf-3.jpg",
+            "assets/competitions/ctf-4.jpg",
+            "assets/competitions/ctf-5.jpg",
+            "assets/competitions/ctf-6.jpg",
+            "assets/competitions/ctf-7.jpg",
+            "assets/competitions/ctf-8.jpg",
+            "assets/competitions/ctf-9.jpg",
+            "assets/competitions/ctf-10.jpg"
+          ]
         }
       ]
     },
