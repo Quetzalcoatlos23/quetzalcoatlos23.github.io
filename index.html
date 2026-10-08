@@ -3,69 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050b14">
+  <meta name="theme-color" content="#03070d">
   <meta name="description" content="Portfolio of Georel Bonai">
   <title>Portfolio | Georel Bonai</title>
-  <link rel="stylesheet" href="style.css?v=20260930-assets">
-  <script defer src="config.js?v=20260930-assets"></script>
-  <script defer src="script.js?v=20260930-assets"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css?v=20260701-cyber">
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script defer src="config.js?v=20260701-cyber"></script>
+  <script defer src="script.js?v=20260701-cyber"></script>
 </head>
 <body>
+<div class="boot-overlay" id="boot-overlay" role="status" aria-live="polite" data-testid="boot-overlay" hidden>
+  <div class="boot-panel">
+    <div class="boot-topline"><span>GB://SYSTEM_DIAGNOSTIC</span><span id="boot-progress">000%</span></div>
+    <div class="boot-lines" id="boot-lines"></div>
+    <button class="boot-skip" id="boot-skip" type="button" data-testid="boot-skip-button">SKIP DIAGNOSTIC</button>
+  </div>
+</div>
+
 <main class="portfolio-shell">
   <div class="matrix-lines" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="brand" href="#top"><span class="brand-mark">[</span> <span id="brand-initials">GB</span> <span class="brand-mark">]</span></a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#about">01 / ABOUT</a><a href="#credentials">02 / CREDENTIALS</a>
-      <a href="#focus">03 / FOCUS</a><a href="#contact">04 / CONTACT</a>
+  <header class="site-header" data-reveal>
+    <a class="brand" href="#top" data-testid="brand-home-link" aria-label="Georel Bonai home">
+      <img src="assets/logo.png" alt="" width="34" height="34">
+      <span><span class="brand-mark">[</span> <span id="brand-initials">GB</span> <span class="brand-mark">]</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation" data-testid="main-navigation">
+      <a href="#about" data-scramble data-testid="nav-about">01 / ABOUT</a>
+      <a href="#credentials" data-scramble data-testid="nav-credentials">02 / CREDENTIALS</a>
+      <a href="#focus" data-scramble data-testid="nav-focus">03 / FOCUS</a>
+      <a href="#terminal" data-scramble data-testid="nav-terminal">04 / TERMINAL</a>
+      <a href="#contact" data-scramble data-testid="nav-contact">05 / CONTACT</a>
     </nav>
-    <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <a class="header-cta" href="#contact">LET’S CONNECT ↗</a>
+    <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" data-testid="mobile-menu-button">☰</button>
+    <a class="header-cta" href="#contact" data-scramble data-testid="header-contact-link">LET’S CONNECT ↗</a>
   </header>
 
-  <section class="hero section-grid" id="top">
+  <section class="hero section-grid" id="top" aria-labelledby="hero-heading">
     <div class="hero-copy" id="about">
-      <div class="eyebrow"><span class="status-dot"></span> OPEN TO OPPORTUNITIES <span class="eyebrow-rule"></span></div>
-      <p class="hero-index">/ PERSONAL PORTFOLIO — <span id="year-range">2026</span></p>
-      <h1 id="hero-heading" aria-label="Georel Jeferson Fransiskus Bonai"><span id="hero-first">GEOREL</span><span class="cyan-text" id="hero-last">BONAI</span></h1>
-      <p class="hero-role" id="role">COMPUTER ENGINEERING / CYBERSECURITY</p>
-      <p class="hero-intro" id="intro"></p>
-      <div class="hero-actions"><a class="primary-button" href="#credentials">EXPLORE MY WORK ↗</a></div>
+      <div class="eyebrow" data-reveal><span class="status-dot"></span> OPEN TO OPPORTUNITIES <span class="eyebrow-rule"></span></div>
+      <p class="hero-index" data-reveal>/ PERSONAL PORTFOLIO — <span id="year-range">2026</span></p>
+      <h1 id="hero-heading" aria-label="Georel Jeferson Fransiskus Bonai" data-testid="hero-heading">
+        <span class="hero-line-shell"><span class="hero-line" id="hero-first">GEOREL</span></span>
+        <span class="hero-line-shell"><span class="hero-line cyan-text" id="hero-last">BONAI</span><span class="hero-cursor" aria-hidden="true"></span></span>
+      </h1>
+      <p class="hero-role" id="role" data-reveal>COMPUTER ENGINEERING / CYBERSECURITY</p>
+      <p class="hero-intro" id="intro" data-reveal></p>
+      <div class="hero-actions" data-reveal>
+        <a class="primary-button" href="#credentials" data-text="EXPLORE MY WORK ↗" data-testid="hero-explore-button">EXPLORE MY WORK ↗</a>
+        <a class="secondary-button" id="hero-cv" href="#" target="_blank" rel="noopener noreferrer" data-testid="hero-cv-link" hidden>DOWNLOAD CV</a>
+      </div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual" data-reveal>
+      <canvas class="particle-canvas" id="particle-canvas" aria-hidden="true" data-testid="hero-particle-canvas"></canvas>
       <div class="portrait-frame">
         <div class="corner corner-tl"></div><div class="corner corner-br"></div>
-        <img id="portrait" src="assets/cyber-portrait.svg" alt="Cyber portrait placeholder">
+        <img id="portrait" src="assets/cyber-portrait.svg" alt="Cyber portrait placeholder" data-testid="hero-portrait">
         <div class="scanline" aria-hidden="true"></div>
       </div>
       <div class="visual-label label-top">SYS.ID // <span id="visual-code">GB-001</span></div>
-      <div class="visual-label label-bottom">SIGNAL: <span>STABLE</span> <span class="signal-bars">▂ ▅ ▇</span></div>
+      <div class="visual-label label-bottom" data-testid="signal-stable">SIGNAL: <span class="signal-stable">STABLE</span> <span class="signal-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
       <div class="orbit-tag">// ALWAYS<br>CURIOUS</div>
     </div>
   </section>
 
-  <section class="credentials section-grid" id="credentials">
-    <div class="section-heading"><p class="section-number">01 / CREDENTIALS</p><h2>PROOF OF<br><span>PROGRESS.</span></h2><p class="section-note">A living archive of the things I’ve learned, built, and earned along the way.</p></div>
-    <div class="certificate-groups" id="certificate-list"></div>
+  <section class="editorial-marquee" aria-label="Portfolio disciplines">
+    <div class="marquee-track">
+      <span>CYBERSECURITY · SYSTEM ADMINISTRATION · AI / MACHINE LEARNING · NETWORK ENGINEERING ·</span>
+      <span aria-hidden="true">CYBERSECURITY · SYSTEM ADMINISTRATION · AI / MACHINE LEARNING · NETWORK ENGINEERING ·</span>
+    </div>
   </section>
 
-  <dialog class="certificate-dialog" id="certificate-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-header"><span id="dialog-counter"></span><span id="dialog-category"></span><button type="button" class="dialog-close" aria-label="Close PDF preview">×</button></div>
-    <div class="dialog-content"><button type="button" class="dialog-previous" aria-label="Previous certificate">‹</button><div class="dialog-document" id="dialog-document"></div><button type="button" class="dialog-next" aria-label="Next certificate">›</button></div>
-    <div class="dialog-details"><div><h3 id="dialog-title"></h3><p id="dialog-description"></p><p class="dialog-meta" id="dialog-meta"></p></div><a id="dialog-open-pdf" target="_blank" rel="noopener noreferrer">OPEN FULL PDF ↗</a></div>
+  <section class="credentials section-grid" id="credentials">
+    <div class="section-heading" data-reveal><p class="section-number">01 / CREDENTIALS</p><h2>PROOF OF<br><span>PROGRESS.</span></h2><p class="section-note">A living archive of the things I’ve learned, built, and earned along the way.</p></div>
+    <div class="certificate-groups" id="certificate-list" data-testid="certificate-list"></div>
+  </section>
+
+  <dialog class="certificate-dialog" id="certificate-dialog" aria-labelledby="dialog-title" data-testid="certificate-dialog" data-lenis-prevent>
+    <div class="dialog-header"><span id="dialog-counter" data-testid="dialog-counter"></span><span id="dialog-category"></span><button type="button" class="dialog-close" aria-label="Close preview" data-testid="dialog-close-button">×</button></div>
+    <div class="dialog-content"><button type="button" class="dialog-previous" aria-label="Previous item" data-testid="dialog-previous-button">‹</button><div class="dialog-document" id="dialog-document" data-testid="dialog-document"></div><button type="button" class="dialog-next" aria-label="Next item" data-testid="dialog-next-button">›</button></div>
+    <div class="dialog-details"><div><h3 id="dialog-title" data-testid="dialog-title"></h3><p id="dialog-description"></p><p class="dialog-meta" id="dialog-meta"></p><p class="dialog-activity-counter" id="dialog-activity-counter" data-testid="dialog-activity-counter"></p></div><a id="dialog-open-pdf" target="_blank" rel="noopener noreferrer" data-testid="dialog-open-pdf">OPEN FULL PDF ↗</a></div>
   </dialog>
 
   <section class="focus-section" id="focus">
-    <div class="section-grid focus-intro"><div><p class="section-number">02 / CURRENT FOCUS</p><h2>THE NEXT<br><span>FRONTIER.</span></h2></div><p class="focus-note">The disciplines occupying my terminal, my notebooks, and most of my questions.</p></div>
-    <div class="focus-list" id="focus-list"></div>
+    <div class="section-grid focus-intro" data-reveal><div><p class="section-number">02 / CURRENT FOCUS</p><h2>THE NEXT<br><span>FRONTIER.</span></h2></div><p class="focus-note">The disciplines occupying my terminal, my notebooks, and most of my questions.</p></div>
+    <div class="focus-list" id="focus-list" data-testid="focus-list"></div>
+  </section>
+
+  <section class="terminal-section section-grid" id="terminal">
+    <div class="section-heading" data-reveal><p class="section-number">03 / GUEST ACCESS</p><h2>QUERY THE<br><span>ARCHIVE.</span></h2><p class="section-note">A compact terminal for quick facts, focus areas, credentials, and CV access.</p></div>
+    <div class="terminal-shell" data-reveal data-testid="interactive-terminal">
+      <div class="terminal-titlebar"><span></span><span></span><span></span><strong>GUEST@GB-PORTFOLIO:~</strong></div>
+      <div class="terminal-output" id="terminal-output" aria-live="polite" data-testid="terminal-output" data-lenis-prevent></div>
+      <form class="terminal-form" id="terminal-form" data-testid="terminal-form">
+        <label class="sr-only" for="terminal-input">Terminal command</label>
+        <span aria-hidden="true">guest@gb:~$</span>
+        <input id="terminal-input" name="command" autocomplete="off" spellcheck="false" placeholder="type `help`" data-testid="terminal-input">
+        <button type="submit" data-testid="terminal-submit-button">RUN</button>
+      </form>
+    </div>
   </section>
 
   <section class="contact section-grid" id="contact">
-    <div class="contact-heading"><p class="section-number">03 / OPEN CHANNELS</p><h2>LET’S BUILD<br><span>WHAT’S NEXT.</span></h2><p>Have a project, an opportunity, or a good problem to solve? My inbox is open.</p></div>
-    <div class="resource-list" id="contact-links"></div>
+    <div class="contact-heading" data-reveal><p class="section-number">04 / OPEN CHANNELS</p><h2>LET’S BUILD<br><span>WHAT’S NEXT.</span></h2><p>Have a project, an opportunity, or a good problem to solve? My inbox is open.</p></div>
+    <div class="resource-list" id="contact-links" data-testid="contact-links"></div>
   </section>
 
-  <footer class="site-footer"><div class="footer-name"><span class="brand-mark">[</span><strong id="footer-name">GEOREL BONAI</strong><span class="brand-mark">]</span><small id="location"></small></div><div class="footer-links" id="social-links"></div><p class="copyright">© <span id="year">2026</span> <span id="copyright-name">GEOREL BONAI</span>. ALL RIGHTS RESERVED.</p></footer>
+  <footer class="site-footer"><div class="footer-name"><span class="brand-mark">[</span><strong id="footer-name">GEOREL BONAI</strong><span class="brand-mark">]</span><small id="location"></small></div><div class="footer-links" id="social-links" data-testid="social-links"></div><p class="copyright">© <span id="year">2026</span> <span id="copyright-name">GEOREL BONAI</span>. ALL RIGHTS RESERVED.</p></footer>
 </main>
 </body>
 </html>
