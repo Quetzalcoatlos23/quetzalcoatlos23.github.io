@@ -107,15 +107,15 @@ const PORTFOLIO = {
           ],
           "activityImages": [
             "assets/competitions/ctf-1.png",
-            "assets/competitions/ctf-2.jpg",
-            "assets/competitions/ctf-3.jpg",
-            "assets/competitions/ctf-4.jpg",
-            "assets/competitions/ctf-5.jpg",
-            "assets/competitions/ctf-6.jpg",
-            "assets/competitions/ctf-7.jpg",
-            "assets/competitions/ctf-8.jpg",
-            "assets/competitions/ctf-9.jpg",
-            "assets/competitions/ctf-10.jpg"
+            "assets/competitions/ctf-2.JPG",
+            "assets/competitions/ctf-3.JPG",
+            "assets/competitions/ctf-4.JPG",
+            "assets/competitions/ctf-5.JPG",
+            "assets/competitions/ctf-6.JPG",
+            "assets/competitions/ctf-7.JPG",
+            "assets/competitions/ctf-8.JPG",
+            "assets/competitions/ctf-9.JPG",
+            "assets/competitions/ctf-10.JPG"
           ]
         }
       ]
