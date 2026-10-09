@@ -183,6 +183,20 @@ const PORTFOLIO = {
           ],
           "file": "assets/certificates/webinar-participation.pdf",
           "preview": "assets/certificates/webinar-participation.jpg"
+        },
+         {
+          "title": "Pelatihan Nasional Terampil Bekerja dengan AI: Praktik Mengelola Dokumen, Data, dan Presentasi",
+          "description": "Sertifikat Pelatihan oleh Edukasa.id dari PT. Sumber Belajar Bersama",
+          "year": "2026",
+          "certificateNumber": "13.003/ED-NSTI/X/2026/EBAKL910",
+          "keywords": [
+            "AI",
+            "Data Analysis",
+            "Document Management",
+            "Presentation Skills"
+          ],
+          "file": "assets/certificates/Sertifikat_GeorelJefersonFransiskusBonaiSKom_091026.pdf",
+          "preview": "assets/certificates/Sertifikat_GeorelJefersonFransiskusBonaiSKom_091026.jpg"
         }
       ]
     }
