@@ -11,12 +11,40 @@ const PORTFOLIO = {
   "role": "COMPUTER ENGINEERING / CYBERSECURITY / AI & MACHINE LEARNING / SYSTEM ADMINISTRATION",
   "tagline": "Building reliable systems and exploring practical security.",
   "intro": "Computer Engineering Fresh Graduate from Universitas Amikom Yogyakarta. I'm interested in cybersecurity, networks, system administration, and machine learning.",
-  "location": "Papua Tengah, Indonesia",
+  "location": "Papua Tengah,Indonesia",
   "email": "georelbonai@gmail.com",
   "github": "https://github.com/Quetzalcoatlos23",
   "linkedin": "https://www.linkedin.com/in/georel-bonai-4b25943bb",
   "cv": "assets/documents/cv-english.pdf",
   "coverLetter": "",
+  /* PROJECT TEMPLATE: duplicate an object to add more project cards.
+     image = preview image path; link = destination URL opened in a new tab. */
+  "projects": [
+    {
+      "title": "PROJECT TITLE ONE",
+      "category": "WEB / SYSTEM",
+      "description": "Write a short overview of this project, its purpose, and what you built.",
+      "image": "assets/projects/project-one.jpg",
+      "link": "https://example.com/project-one",
+      "tags": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "title": "PROJECT TITLE TWO",
+      "category": "CYBERSECURITY",
+      "description": "Describe the challenge, your approach, and the result in a few sentences.",
+      "image": "assets/projects/project-two.jpg",
+      "link": "https://example.com/project-two",
+      "tags": ["Security", "Networking", "Linux"]
+    },
+    {
+      "title": "PROJECT TITLE THREE",
+      "category": "SYSTEM ADMINISTRATION",
+      "description": "Add a short explanation of the system, tools, and skills used in this project.",
+      "image": "assets/projects/project-three.jpg",
+      "link": "https://example.com/project-three",
+      "tags": ["Linux", "Automation", "Bash"]
+    }
+  ],
   "certificateGroups": [
     {
       "heading": "Cisco Networking Academy",
@@ -107,15 +135,15 @@ const PORTFOLIO = {
           ],
           "activityImages": [
             "assets/competitions/ctf-1.png",
-            "assets/competitions/ctf-2.JPG",
-            "assets/competitions/ctf-3.JPG",
-            "assets/competitions/ctf-4.JPG",
-            "assets/competitions/ctf-5.JPG",
-            "assets/competitions/ctf-6.JPG",
-            "assets/competitions/ctf-7.JPG",
-            "assets/competitions/ctf-8.JPG",
-            "assets/competitions/ctf-9.JPG",
-            "assets/competitions/ctf-10.JPG"
+            "assets/competitions/ctf-2.jpg",
+            "assets/competitions/ctf-3.jpg",
+            "assets/competitions/ctf-4.jpg",
+            "assets/competitions/ctf-5.jpg",
+            "assets/competitions/ctf-6.jpg",
+            "assets/competitions/ctf-7.jpg",
+            "assets/competitions/ctf-8.jpg",
+            "assets/competitions/ctf-9.jpg",
+            "assets/competitions/ctf-10.jpg"
           ]
         }
       ]
@@ -184,7 +212,7 @@ const PORTFOLIO = {
           "file": "assets/certificates/webinar-participation.pdf",
           "preview": "assets/certificates/webinar-participation.jpg"
         },
-         {
+        {
           "title": "Pelatihan Nasional Terampil Bekerja dengan AI: Praktik Mengelola Dokumen, Data, dan Presentasi",
           "description": "Sertifikat Pelatihan oleh Edukasa.id dari PT. Sumber Belajar Bersama",
           "year": "2026",
