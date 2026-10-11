@@ -347,3 +347,46 @@ body.motion-pending [data-reveal].is-visible { opacity: 1; transform: none; tran
   body::before, .scanline, .marquee-track { animation: none !important; }
   body.motion-pending [data-reveal], body.motion-pending .hero-line { opacity: 1 !important; transform: none !important; }
 }
+
+
+/* PROJECT ARCHIVE — matching the existing cyber terminal aesthetic */
+.projects-section { padding-top: 112px; padding-bottom: 112px; border-top: 1px solid var(--line); }
+.project-groups { min-width: 0; }
+.project-groups, #project-list { width: 100%; }
+#project-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-content: start; }
+.project-card { min-width: 0; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(8,22,36,.9), rgba(3,10,18,.92)); transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+.project-card:hover { border-color: var(--line-strong); transform: translateY(-4px); box-shadow: 0 16px 42px rgba(0,234,255,.08); }
+.project-card-open { display: block; width: 100%; height: 100%; padding: 0; text-align: left; color: inherit; background: transparent; border: 0; cursor: pointer; font: inherit; }
+.project-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; color: var(--green); font: 500 10px 'JetBrains Mono', monospace; letter-spacing: .08em; border-bottom: 1px solid var(--line); }
+.project-card-top span:last-child { font-size: 17px; }
+.project-card-preview { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(ellipse at center, rgba(0,234,255,.08), transparent 70%), #050d16; border-bottom: 1px solid var(--line); }
+.project-card-preview img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease, filter .35s ease; }
+.project-card:hover .project-card-preview img { transform: scale(1.035); filter: saturate(1.12); }
+.project-preview-empty { color: var(--dim); padding: 20px; text-align: center; font: 10px 'JetBrains Mono', monospace; letter-spacing: .06em; }
+.project-card-info { padding: 20px 18px 18px; }
+.project-category { margin: 0 0 9px; color: var(--cyan); font: 500 10px 'JetBrains Mono', monospace; letter-spacing: .1em; }
+.project-card-info h3 { margin: 0 0 10px; font: 600 19px 'Space Grotesk', sans-serif; overflow-wrap: anywhere; }
+.project-card-info > p:not(.project-category) { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.project-card-cta { display: inline-block; margin-top: 20px; color: var(--green); font: 500 10px 'JetBrains Mono', monospace; letter-spacing: .08em; }
+.project-dialog { width: min(900px, calc(100% - 28px)); max-width: 900px; max-height: min(90vh, 900px); padding: 0; overflow: auto; color: var(--text); background: #06111d; border: 1px solid var(--line-strong); box-shadow: 0 30px 100px rgba(0,0,0,.75); }
+.project-dialog::backdrop { background: rgba(0,5,12,.82); backdrop-filter: blur(8px); }
+.project-dialog .dialog-header { position: sticky; top: 0; z-index: 2; background: rgba(5,16,28,.96); }
+.project-dialog-preview { display: grid; place-items: center; min-height: 190px; max-height: 54vh; overflow: hidden; background: #03070d; border-bottom: 1px solid var(--line); color: var(--dim); font: 11px 'JetBrains Mono', monospace; }
+.project-dialog-preview img { display: block; max-width: 100%; max-height: 54vh; width: 100%; object-fit: contain; }
+.project-dialog-details { display: flex; justify-content: space-between; align-items: flex-start; gap: 28px; padding: 26px; }
+.project-dialog-details > div { min-width: 0; }
+.project-dialog-details h3 { margin: 0 0 10px; font-size: clamp(22px, 3vw, 30px); overflow-wrap: anywhere; }
+.project-dialog-details p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; white-space: pre-line; }
+.project-dialog-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+.project-dialog-tags span { padding: 6px 9px; color: var(--green); border: 1px solid rgba(88,255,154,.25); background: rgba(88,255,154,.04); font: 10px 'JetBrains Mono', monospace; }
+.project-destination { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; padding: 13px 16px; color: #001018; background: var(--cyan); font: 600 10px 'JetBrains Mono', monospace; letter-spacing: .06em; text-decoration: none; }
+.project-destination:hover { background: var(--green); }
+.project-destination[hidden] { display: none; }
+@media (max-width: 900px) { #project-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .projects-section { padding-top: 76px; padding-bottom: 76px; }
+  #project-list { grid-template-columns: 1fr; gap: 14px; }
+  .project-card-info { padding: 17px; }
+  .project-dialog-details { flex-direction: column; padding: 20px; gap: 20px; }
+  .project-destination { width: 100%; min-height: 44px; }
+}
