@@ -31,9 +31,10 @@
     <nav class="site-nav" aria-label="Main navigation" data-testid="main-navigation">
       <a href="#about" data-scramble data-testid="nav-about">01 / ABOUT</a>
       <a href="#credentials" data-scramble data-testid="nav-credentials">02 / CREDENTIALS</a>
-      <a href="#focus" data-scramble data-testid="nav-focus">03 / FOCUS</a>
-      <a href="#terminal" data-scramble data-testid="nav-terminal">04 / TERMINAL</a>
-      <a href="#contact" data-scramble data-testid="nav-contact">05 / CONTACT</a>
+      <a href="#projects" data-scramble data-testid="nav-projects">03 / PROJECTS</a>
+      <a href="#focus" data-scramble data-testid="nav-focus">04 / FOCUS</a>
+      <a href="#terminal" data-scramble data-testid="nav-terminal">05 / TERMINAL</a>
+      <a href="#contact" data-scramble data-testid="nav-contact">06 / CONTACT</a>
     </nav>
     <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" data-testid="mobile-menu-button">☰</button>
     <a class="header-cta" href="#contact" data-scramble data-testid="header-contact-link">LET’S CONNECT ↗</a>
@@ -85,13 +86,24 @@
     <div class="dialog-details"><div><h3 id="dialog-title" data-testid="dialog-title"></h3><p id="dialog-description"></p><p class="dialog-meta" id="dialog-meta"></p><p class="dialog-activity-counter" id="dialog-activity-counter" data-testid="dialog-activity-counter"></p></div><a id="dialog-open-pdf" target="_blank" rel="noopener noreferrer" data-testid="dialog-open-pdf">OPEN FULL PDF ↗</a></div>
   </dialog>
 
+  <section class="projects-section section-grid" id="projects">
+    <div class="section-heading" data-reveal><p class="section-number">02 / PROJECT ARCHIVE</p><h2>THINGS I’VE<br><span>BUILT.</span></h2><p class="section-note">Selected projects, experiments, and systems. Open a project to explore its details.</p></div>
+    <div class="project-groups" id="project-list" data-testid="project-list"></div>
+  </section>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title" data-testid="project-dialog" data-lenis-prevent>
+    <div class="dialog-header"><span id="project-dialog-counter">PROJECT / 01</span><span id="project-dialog-category">PROJECT ARCHIVE</span><button type="button" class="project-dialog-close dialog-close" aria-label="Close project preview">×</button></div>
+    <div class="project-dialog-preview" id="project-dialog-preview"></div>
+    <div class="project-dialog-details"><div><h3 id="project-dialog-title"></h3><p id="project-dialog-description"></p><div class="project-dialog-tags" id="project-dialog-tags"></div></div><a id="project-dialog-link" class="project-destination" href="#" target="_blank" rel="noopener noreferrer">OPEN PROJECT ↗</a></div>
+  </dialog>
+
   <section class="focus-section" id="focus">
-    <div class="section-grid focus-intro" data-reveal><div><p class="section-number">02 / CURRENT FOCUS</p><h2>THE NEXT<br><span>FRONTIER.</span></h2></div><p class="focus-note">The disciplines occupying my terminal, my notebooks, and most of my questions.</p></div>
+    <div class="section-grid focus-intro" data-reveal><div><p class="section-number">03 / CURRENT FOCUS</p><h2>THE NEXT<br><span>FRONTIER.</span></h2></div><p class="focus-note">The disciplines occupying my terminal, my notebooks, and most of my questions.</p></div>
     <div class="focus-list" id="focus-list" data-testid="focus-list"></div>
   </section>
 
   <section class="terminal-section section-grid" id="terminal">
-    <div class="section-heading" data-reveal><p class="section-number">03 / GUEST ACCESS</p><h2>QUERY THE<br><span>ARCHIVE.</span></h2><p class="section-note">A compact terminal for quick facts, focus areas, credentials, and CV access.</p></div>
+    <div class="section-heading" data-reveal><p class="section-number">04 / GUEST ACCESS</p><h2>QUERY THE<br><span>ARCHIVE.</span></h2><p class="section-note">A compact terminal for quick facts, focus areas, credentials, and CV access.</p></div>
     <div class="terminal-shell" data-reveal data-testid="interactive-terminal">
       <div class="terminal-titlebar"><span></span><span></span><span></span><strong>GUEST@GB-PORTFOLIO:~</strong></div>
       <div class="terminal-output" id="terminal-output" aria-live="polite" data-testid="terminal-output" data-lenis-prevent></div>
@@ -105,7 +117,7 @@
   </section>
 
   <section class="contact section-grid" id="contact">
-    <div class="contact-heading" data-reveal><p class="section-number">04 / OPEN CHANNELS</p><h2>LET’S BUILD<br><span>WHAT’S NEXT.</span></h2><p>Have a project, an opportunity, or a good problem to solve? My inbox is open.</p></div>
+    <div class="contact-heading" data-reveal><p class="section-number">05 / OPEN CHANNELS</p><h2>LET’S BUILD<br><span>WHAT’S NEXT.</span></h2><p>Have a project, an opportunity, or a good problem to solve? My inbox is open.</p></div>
     <div class="resource-list" id="contact-links" data-testid="contact-links"></div>
   </section>
 
