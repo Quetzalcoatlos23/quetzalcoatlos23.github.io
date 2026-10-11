@@ -369,6 +369,96 @@ function initPortfolio(profile) {
     list.append(section);
   });
 
+  // Projects: cards and detail modal are configured entirely in config.js.
+  const projectList = $("#project-list");
+  const projects = Array.isArray(profile.projects) ? profile.projects : [];
+  const projectDialog = $("#project-dialog");
+  const projectPreview = $("#project-dialog-preview");
+  const projectTags = $("#project-dialog-tags");
+  let lastProjectTrigger = null;
+
+  projects.forEach((item, index) => {
+    const card = document.createElement("article");
+    card.className = "project-card";
+    card.dataset.reveal = "";
+    card.dataset.testid = `project-card-${slugify(item.title)}`;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "project-card-open";
+    button.setAttribute("aria-label", `View project details: ${item.title}`);
+    const top = document.createElement("div");
+    top.className = "project-card-top";
+    const number = document.createElement("span");
+    number.textContent = `PROJECT / ${String(index + 1).padStart(2, "0")}`;
+    const arrow = document.createElement("span");
+    arrow.textContent = "↗";
+    top.append(number, arrow);
+    const preview = document.createElement("div");
+    preview.className = "project-card-preview";
+    if (item.image) {
+      const image = document.createElement("img");
+      image.src = item.image;
+      image.alt = `Preview of ${item.title}`;
+      image.loading = "lazy";
+      image.onerror = () => { image.remove(); preview.classList.add("project-preview-empty"); preview.textContent = "ADD PREVIEW IMAGE IN CONFIG.JS"; };
+      preview.append(image);
+    } else {
+      preview.classList.add("project-preview-empty");
+      preview.textContent = "ADD PREVIEW IMAGE IN CONFIG.JS";
+    }
+    const info = document.createElement("div");
+    info.className = "project-card-info";
+    const category = document.createElement("p");
+    category.className = "project-category";
+    category.textContent = item.category || "PROJECT";
+    const title = document.createElement("h3");
+    title.textContent = item.title || "Untitled project";
+    const desc = document.createElement("p");
+    desc.textContent = item.description || "Add a project description in config.js.";
+    const footer = document.createElement("span");
+    footer.className = "project-card-cta";
+    footer.textContent = "INSPECT PROJECT ↗";
+    info.append(category, title, desc, footer);
+    button.append(top, preview, info);
+    button.addEventListener("click", () => {
+      lastProjectTrigger = button;
+      setText("#project-dialog-counter", `PROJECT / ${String(index + 1).padStart(2, "0")} · ${String(projects.length).padStart(2, "0")}`);
+      setText("#project-dialog-category", item.category || "PROJECT ARCHIVE");
+      setText("#project-dialog-title", item.title || "Untitled project");
+      setText("#project-dialog-description", item.description || "");
+      projectPreview.replaceChildren();
+      if (item.image) {
+        const image = document.createElement("img");
+        image.src = item.image;
+        image.alt = `Preview of ${item.title}`;
+        projectPreview.append(image);
+      } else {
+        projectPreview.textContent = "ADD PREVIEW IMAGE IN CONFIG.JS";
+      }
+      projectTags.replaceChildren();
+      (item.tags || []).forEach(tag => { const el = document.createElement("span"); el.textContent = tag; projectTags.append(el); });
+      const destination = $("#project-dialog-link");
+      destination.href = item.link || "#";
+      destination.hidden = !item.link || item.link === "#";
+      if (!projectDialog.open) projectDialog.showModal();
+      projectDialog.classList.remove("is-closing");
+      window.requestAnimationFrame(() => projectDialog.classList.add("is-open"));
+    });
+    card.append(button);
+    projectList.append(card);
+  });
+
+  const closeProjectDialog = () => {
+    projectDialog.classList.add("is-closing");
+    window.setTimeout(() => {
+      if (projectDialog.open) projectDialog.close();
+      projectDialog.classList.remove("is-open", "is-closing");
+    }, reducedMotion ? 0 : 190);
+  };
+  $(".project-dialog-close").addEventListener("click", closeProjectDialog);
+  projectDialog.addEventListener("click", event => { if (event.target === projectDialog) closeProjectDialog(); });
+  projectDialog.addEventListener("close", () => { projectPreview.replaceChildren(); if (lastProjectTrigger) lastProjectTrigger.focus({ preventScroll: true }); });
+
   const dialog = $("#certificate-dialog");
   const documentArea = $("#dialog-document");
   const activityCounter = $("#dialog-activity-counter");
