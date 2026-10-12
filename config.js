@@ -21,12 +21,12 @@ const PORTFOLIO = {
      image = preview image path; link = destination URL opened in a new tab. */
   "projects": [
     {
-      "title": "PROJECT TITLE ONE",
-      "category": "WEB / SYSTEM",
-      "description": "Write a short overview of this project, its purpose, and what you built.",
-      "image": "assets/projects/project-one.jpg",
-      "link": "https://example.com/project-one",
-      "tags": ["HTML", "CSS", "JavaScript"]
+      "title": "FINAL PROJECT OS SERVER & SYSTEM ADMIN",
+      "category": "SYSTEM ADMINISTRATION",
+      "description": "This project involves the implementation and configuration of an advanced server network operating system using CentOS 7, designed to simulate a self-hosted data center or enterprise server environment. Within this project, various essential IT infrastructure services are configured, integrated, and tested to ensure optimal functionality and security.",
+      "image": "assets/projects/project-one.png",
+      "link": "https://quetzalcoatlos23.github.io/gebon-sys/",
+      "tags": ["httpd", "Postfix", "MariaDB", "Dovecot", "chronyd", "sshd"]
     },
     {
       "title": "PROJECT TITLE TWO",
