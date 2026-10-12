@@ -29,12 +29,12 @@ const PORTFOLIO = {
       "tags": ["httpd", "Postfix", "MariaDB", "Dovecot", "chronyd", "sshd"]
     },
     {
-      "title": "PROJECT TITLE TWO",
+      "title": "Advanced Multi-VM Security System Administration & Infrastructure (ProjectMen)",
       "category": "CYBERSECURITY",
-      "description": "Describe the challenge, your approach, and the result in a few sentences.",
-      "image": "assets/projects/project-two.jpg",
-      "link": "https://example.com/project-two",
-      "tags": ["Security", "Networking", "Linux"]
+      "description": "This enterprise-scale collaborative team project simulates a distributed network infrastructure environment that is highly secure and resilient against potential cyberattacks. Utilizing three primary virtual machines with specific roles, the project implements defense-in-depth practices to secure web, email, and database services, as well as real-time server log monitoring.",
+      "image": "assets/projects/project-two.png",
+      "link": "https://quetzalcoatlos23.github.io/projectmen/",
+      "tags": ["Security", "HoneyPot", "Port-Knocking", "Open SSL", "Apache2", "Grafana", "BIND9"]
     },
     {
       "title": "PROJECT TITLE THREE",
